@@ -1,17 +1,8 @@
 <svg id="layer1" data-name="layer1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.02 195.05">
   <defs>
     <style>
-      @font-face {
-        font-family: 'UDDigiKyokashoNK-B';
-        src: url('../font/UDDigiKyokashoNK-B.woff2') format('woff2');
-      }
-      .cls-1, .cls-2 {
+      .cls-1 {
         fill: #9e1084;
-      }
-      .cls-2 {
-        font-size: 35px;
-        font-family: 'UDDigiKyokashoNK-B';
-        font-weight: 700;
       }
     </style>
   </defs>
@@ -26,7 +17,4 @@
     d="M387.67,160.5v30a5,5,0,0,1-5,5h-65v-35a5,5,0,0,1,5-5h60A5,5,0,0,1,387.67,160.5Z" 
     transform="translate(-165.66 -95.5)"
   />
-  <text class="cls-2" transform="translate(0 186.78)">
-    <tspan xml:space="preserve">LUNA  FLOW</tspan>
-  </text>
 </svg>
