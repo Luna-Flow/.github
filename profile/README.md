@@ -1,4 +1,4 @@
-<p align="luna-flow">
+<p align="center">
   <h1 align="center">Luna Flow</h1>
 </p>
 <br>
@@ -9,4 +9,12 @@
   A MoonBit scientific computing ecosystem.
   <br>
   Collection of tools and libraries for scientific computing and data analysis.
+</p>
+
+<p>
+  <h2>News</h2>
+</p>
+<br>
+<p>
+  Luna-Flow/linear-algebra BETA version will be published in 2026 Q1.
 </p>
