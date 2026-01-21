@@ -6,9 +6,7 @@
 <p align="center"><img width="200" src="./img/luna-flow.svg" alt="logo"></a></p>
 
 <p align="center">
-  A MoonBit scientific computing ecosystem.
-  <br>
-  Collection of tools and libraries for scientific computing and data analysis.
+  A comprehensive mathematical foundation for the MoonBit ecosystem.
 </p>
 
 <p>
