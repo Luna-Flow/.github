@@ -9,10 +9,3 @@
   A comprehensive mathematical foundation for the MoonBit ecosystem.
 </p>
 
-<p>
-  <h2>News</h2>
-</p>
-<br>
-<p>
-  Luna-Flow/linear-algebra BETA version will be published in 2026 Q1.
-</p>
