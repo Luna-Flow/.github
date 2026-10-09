@@ -1,0 +1,42 @@
+name: Project sync
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only print what would change"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - project-sync.json
+      - scripts/project_sync.py
+      - .github/workflows/project-sync.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: project-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync open issues and pull requests into the organization project
+        env:
+          GH_TOKEN: ${{ secrets.PROJECT_SYNC_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::PROJECT_SYNC_TOKEN secret is not set"
+            exit 1
+          fi
+          args=()
+          if [ "${{ inputs.dry_run }}" = "true" ]; then args+=(--dry-run); fi
+          python3 scripts/project_sync.py "${args[@]}"
