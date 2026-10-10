@@ -7,6 +7,9 @@
   or merged items move to the closed status. Manual values are kept.
 - Never removes items.
 
+With "public_only": true in the config, private repositories are skipped, so
+a public project never receives items from them.
+
 Needs `gh` authenticated with a token that can read every repository and
 write the organization project (GH_TOKEN in CI).
 """
@@ -74,7 +77,7 @@ query($org: String!, $after: String) {
   organization(login: $org) {
     repositories(first: 100, after: $after) {
       pageInfo { hasNextPage endCursor }
-      nodes { name isArchived }
+      nodes { name isArchived isPrivate }
     }
   }
 }"""
@@ -157,7 +160,7 @@ def main():
                                 "repo": content["repository"]["name"], "values": values}
 
     repos = [r["name"] for r in paginate(REPOS_Q, ["organization", "repositories"], org=org)
-             if not r["isArchived"]]
+             if not r["isArchived"] and not (config.get("public_only") and r["isPrivate"])]
 
     stats = {"added": 0, "updated": 0, "unmapped": set()}
 
