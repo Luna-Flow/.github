@@ -13,6 +13,7 @@ on:
     branches: [main]
     paths:
       - project-sync.json
+      - project-sync-public.json
       - scripts/project_sync.py
       - .github/workflows/project-sync.yml
 
@@ -38,5 +39,12 @@ jobs:
             exit 1
           fi
           args=()
+          if [ "${{ inputs.dry_run }}" = "true" ]; then args+=(--dry-run); fi
+          python3 scripts/project_sync.py "${args[@]}"
+      - name: Sync open issues and pull requests into the public project
+        env:
+          GH_TOKEN: ${{ secrets.PROJECT_SYNC_TOKEN }}
+        run: |
+          args=(--config project-sync-public.json)
           if [ "${{ inputs.dry_run }}" = "true" ]; then args+=(--dry-run); fi
           python3 scripts/project_sync.py "${args[@]}"

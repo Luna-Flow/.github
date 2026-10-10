@@ -1,0 +1,73 @@
+{
+  "org": "Luna-Flow",
+  "project": 2,
+  "status": {
+    "field": "Status",
+    "open_issue": "Todo",
+    "open_pull_request": "In progress",
+    "closed": "Done"
+  },
+  "tier": {
+    "field": "Tier",
+    "repos": {
+      "luna-utils": "P1",
+      "luna-generic": "P1",
+      "type_theory": "P1",
+      "mare_mark": "P1",
+      "arithmetic": "P1",
+      "linear-algebra": "P1",
+      "floating": "P1",
+      "luna-poly": "P1",
+      "luna-complex": "P2",
+      "quaternion": "P2",
+      "geometry3d": "P2",
+      "autodiff": "P2",
+      "calculus-numerical": "P2",
+      "diff_bench": "P2",
+      "cube_rotate": "P2",
+      "linear-program": "P2",
+      "QED": "P2",
+      "stella": "P2",
+      "calculus-symbolic": "P2",
+      "mooncake_impact_factor": "P2",
+      "luna_thread": "P2",
+      "computable-real": "P2",
+      "template": "P2",
+      "Luna-Flow.github.io": "P2",
+      "community-blog": "P2",
+      ".github": "P2"
+    }
+  },
+  "layer": {
+    "field": "Layer",
+    "repos": {
+      "luna-utils": "Base",
+      "luna-generic": "L0",
+      "type_theory": "L0",
+      "mare_mark": "L0",
+      "arithmetic": "L1",
+      "linear-algebra": "L2",
+      "floating": "L2",
+      "luna-complex": "L2",
+      "luna-poly": "L2",
+      "quaternion": "L2",
+      "geometry3d": "L3",
+      "autodiff": "L3",
+      "calculus-numerical": "L3",
+      "diff_bench": "L3",
+      "cube_rotate": "L3",
+      "linear-program": "L3",
+      "QED": "Independent",
+      "stella": "Independent",
+      "calculus-symbolic": "Independent",
+      "mooncake_impact_factor": "Independent",
+      "luna_thread": "Independent",
+      "computable-real": "Independent",
+      "template": "Infra",
+      "Luna-Flow.github.io": "Infra",
+      "community-blog": "Infra",
+      ".github": "Infra"
+    }
+  },
+  "public_only": true
+}
